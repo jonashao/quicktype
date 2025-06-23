@@ -252,7 +252,7 @@ export const RustLanguage: Language = {
     output: "module_under_test.rs",
     topLevel: "TopLevel",
     skipJSON: [],
-    skipSchema: [],
+    skipSchema: ["ref-remote.schema"],
     skipMiscJSON: false,
     rendererOptions: {},
     quickTestRendererOptions: [
@@ -260,6 +260,9 @@ export const RustLanguage: Language = {
         { visibility: "crate" },
         { visibility: "private" },
         { visibility: "public" },
+        { "integer-type": "conservative" },
+        { "integer-type": "force-i32" },
+        { "integer-type": "force-i64" },
     ],
     sourceFiles: ["src/language/Rust/index.ts"],
 };
